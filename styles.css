@@ -1,0 +1,626 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #080914;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(8, 9, 20, 0.8);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    background: #dc2626;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+nav a {
+    color: #a0a0ab;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #ef4444;
+    font-weight: bold;
+}
+
+.btn-talk {
+    background: #dc2626;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 8%;
+    min-height: 85vh;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.code-line {
+    color: #22c55e;
+    font-family: monospace;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.name {
+    color: #dc2626;
+    text-shadow: 0 0 20px rgba(220, 38, 38, 0.4);
+}
+
+.typing-text {
+    color: #fca5a5;
+    font-size: 20px;
+    margin: 15px 0 25px 0;
+    font-family: monospace;
+}
+
+.cursor {
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.description p {
+    color: rgba(107, 128, 109, 0.88);
+    font-family: monospace;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Tags */
+.tags {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #111827;
+    border: 1px solid #1f2937;
+    color: #0b0cfa;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.5);
+}
+
+.btn-secondary {
+    background: #111827;
+    color: white;
+    border: 1px solid #374151;
+    padding: 12px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Profile Image Styles */
+.hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #dc2626;
+    box-shadow: 0 0 35px rgba(220, 38, 38, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-wrapper:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 50px rgba(220, 38, 38, 0.8);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Shop Section */
+.shop-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.shop-title {
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.shop-title span {
+    color: #dc2626;
+}
+
+.shop-subtitle {
+    color: #9ca3af;
+    margin-bottom: 40px;
+    font-family: monospace;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background: #111827;
+    border: 1px solid #1f2937;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    border-color: #dc2626;
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.2);
+}
+
+/* Product Card Images (Fixed Scaling Bug) */
+.product-img {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: #9ca3af;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ef4444;
+    margin-bottom: 15px;
+}
+
+/* Modal Popup Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #111827;
+    border: 1px solid #dc2626;
+    margin: 10% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 25px rgba(220, 38, 38, 0.3);
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #dc2626;
+}
+
+.modal-title {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.modal-price {
+    color: #ef4444;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.bank-details {
+    background: #1f2937;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.bank-details h3 {
+    color: #dc2626;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.bank-details p {
+    color: #d1d5db;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.instruction-text {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-bottom: 20px;
+}
+
+.btn-telegram {
+    display: inline-block;
+    background: #0088cc;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-telegram:hover {
+    background: #006699;
+    box-shadow: 0 0 15px rgba(0, 136, 204, 0.4);
+}/* Social Section Styles */
+.social-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.social-card {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(220, 38, 38, 0.25);
+}
+
+/* Platform Border Colors on Hover */
+.social-card.youtube:hover { border-color: #ff0000; }
+.social-card.tiktok:hover { border-color: #00f2fe; }
+.social-card.discord:hover { border-color: #5865f2; }
+.social-card.facebook:hover { border-color: #1877f2; }
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    font-size: 38px;
+}
+
+.youtube .social-icon { color: #ff0000; }
+.tiktok .social-icon { color: #00f2fe; }
+.discord .social-icon { color: #5865f2; }
+.facebook .social-icon { color: #1877f2; }
+
+/* Live Badge */
+.live-badge {
+    background: rgba(220, 38, 38, 0.2);
+    color: #ef4444;
+    border: 1px solid #dc2626;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.live-badge i {
+    font-size: 8px;
+    margin-right: 4px;
+    animation: blink 1s infinite;
+}
+
+/* Card Titles & Text */
+.social-card h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.social-card p {
+    color: #9ca3af;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+/* Stats Box Container */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    background: #1f2937;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #9ca3af;
+    text-transform: uppercase;
+    margin-top: 3px;
+}
+
+.online-count {
+    color: #22c55e;
+}
+
+.online-count i {
+    font-size: 8px;
+}
+
+/* Social Buttons */
+.btn-social {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.btn-yt { background: #ff0000; }
+.btn-yt:hover { background: #cc0000; box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); }
+
+.btn-tt { background: #000000; border: 1px solid #333; }
+.btn-tt:hover { background: #111; box-shadow: 0 0 15px rgba(0, 242, 254, 0.3); }
+
+.btn-dc { background: #5865f2; }
+.btn-dc:hover { background: #4752c4; box-shadow: 0 0 15px rgba(88, 101, 242, 0.4); }
+
+.btn-fb { background: #1877f2; }
+.btn-fb:hover { background: #1464c9; box-shadow: 0 0 15px rgba(24, 119, 242, 0.4); }
+/* ==========================================
+   MINECRAFT PAGE STYLES
+   ========================================== */
+
+/* Minecraft Section Container */
+.minecraft-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+/* Skins Grid Layout (Responsive Grid) */
+.mc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Skin Card Design */
+.mc-card {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.mc-card:hover {
+    transform: translateY(-8px);
+    border-color: #22c55e; /* Minecraft Green Accent */
+    box-shadow: 0 0 25px rgba(34, 197, 94, 0.25);
+}
+
+/* Owner Card Highlight */
+.mc-card.my-skin {
+    border-color: #dc2626;
+}
+
+.mc-card.my-skin:hover {
+    box-shadow: 0 0 25px rgba(220, 38, 38, 0.35);
+}
+
+/* Badges (Owner, Admin, Member) */
+.mc-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #dc2626;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.mc-badge.friend {
+    background: #1f2937;
+    color: #9ca3af;
+    border: 1px solid #374151;
+}
+
+/* Skin Image Box & Glow Effect */
+.mc-img-box {
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    background: radial-gradient(circle, rgba(34, 197, 94, 0.08) 0%, rgba(17, 24, 39, 0) 70%);
+    border-radius: 12px;
+}
+
+.mc-skin-img {
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 12px rgba(0, 0, 0, 0.6));
+    transition: transform 0.3s ease;
+}
+
+.mc-card:hover .mc-skin-img {
+    transform: scale(1.08);
+}
+
+/* Typography & Titles */
+.mc-card h3 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.mc-role {
+    color: #9ca3af;
+    font-size: 13px;
+    font-family: monospace;
+    margin-bottom: 15px;
+}
+
+/* Online / Offline Status Badges */
+.mc-status {
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: #1f2937;
+}
+
+.mc-status.online {
+    color: #22c55e;
+}
+
+.mc-status.offline {
+    color: #6b7280;
+}
+
+.mc-status i {
+    font-size: 8px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
