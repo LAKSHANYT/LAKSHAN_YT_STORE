@@ -139,6 +139,32 @@
             opacity: 0.9;
             box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
         }
+
+        /* Coming Soon Custom Styles */
+        .product-card {
+            position: relative;
+        }
+        .coming-soon-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ff4d4d;
+            color: #fff;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            box-shadow: 0 0 8px rgba(255, 77, 77, 0.6);
+            z-index: 5;
+        }
+        .btn-disabled {
+            background: #444 !important;
+            color: #888 !important;
+            cursor: not-allowed !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
     </style>
 </head>
 <body>
@@ -226,6 +252,54 @@
                 <p>Fortnite Account with Battle Pass Skins & OG V-Bucks.</p>
                 <div class="price">LKR 3,100</div>
                 <button class="btn-primary" onclick="openBuyModal('FORTNITE ACCOUNT', '3100')">Buy Now</button>
+            </div>
+
+            <!-- 7. Coming Soon 1 -->
+            <div class="product-card">
+                <span class="coming-soon-badge">Coming Soon</span>
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=500&auto=format&fit=crop&q=60" alt="Coming Soon Game" class="card-thumb">
+                </div>
+                <h3>STEAM GIFT CARD</h3>
+                <p>Steam Wallet Codes & Gift Cards stock arriving soon!</p>
+                <div class="price">LKR ---</div>
+                <button class="btn-primary btn-disabled" disabled>Coming Soon</button>
+            </div>
+
+            <!-- 8. Coming Soon 2 -->
+            <div class="product-card">
+                <span class="coming-soon-badge">Coming Soon</span>
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=500&auto=format&fit=crop&q=60" alt="Coming Soon Game" class="card-thumb">
+                </div>
+                <h3>PUBG MOBILE UC</h3>
+                <p>Instant PUBG Mobile Unknown Cash (UC) top-up service.</p>
+                <div class="price">LKR ---</div>
+                <button class="btn-primary btn-disabled" disabled>Coming Soon</button>
+            </div>
+
+            <!-- 9. Coming Soon 3 -->
+            <div class="product-card">
+                <span class="coming-soon-badge">Coming Soon</span>
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&auto=format&fit=crop&q=60" alt="Coming Soon Game" class="card-thumb">
+                </div>
+                <h3>FREE FIRE DIAMONDS</h3>
+                <p>Garena Free Fire Direct Diamonds Top-Up Packs.</p>
+                <div class="price">LKR ---</div>
+                <button class="btn-primary btn-disabled" disabled>Coming Soon</button>
+            </div>
+
+            <!-- 10. Coming Soon 4 -->
+            <div class="product-card">
+                <span class="coming-soon-badge">Coming Soon</span>
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&auto=format&fit=crop&q=60" alt="Coming Soon Game" class="card-thumb">
+                </div>
+                <h3>DISCORD NITRO</h3>
+                <p>Discord Nitro Monthly & Yearly Gift Subscriptions.</p>
+                <div class="price">LKR ---</div>
+                <button class="btn-primary btn-disabled" disabled>Coming Soon</button>
             </div>
         </div>
     </section>
